@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa; /* Light Gray Background */
+            color: #333; /* Dark Gray Text */
+        }
+
+        .frame {
+            box-sizing: border-box;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            overflow: hidden; /* Hide the overflow content */
+        }
+
+        .marquee-text {
+            animation: marquee 15s linear infinite; /* Adjust the duration as needed */
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .frame1 {
+            box-sizing: border-box;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap; /* Allow columns to wrap to the next line on smaller screens */
+            justify-content: space-around; /* Evenly distribute columns */
+        }
+
+        .columns {
+            box-sizing: border-box;
+            padding: 20px;
+            width: calc(20% - 20px); /* Adjusted width to accommodate margin */
+            min-width: 200px; /* Set a minimum width for the columns */
+            height: 30vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #ecf0f1; /* Light Grey */
+            color: #333; /* Dark Grey text */
+            border: 1px solid #bdc3c7; /* Add border with color */
+            border-radius: 10px; /* Rounded Corners */
+            margin-right: 20px; /* Increased margin for spacing */
+            margin-bottom: 20px; /* Added margin at the bottom */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .columns:hover {
+            transform: scale(1.05); /* Enlarge the column on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover for a lifted effect */
+        }
+
+        .columns1 {
+            box-sizing: border-box;
+            padding: 20px;
+            width: calc(50% - 20px); /* Adjusted width to accommodate margin */
+            min-width: 300px; /* Set a minimum width for the columns */
+            height: auto; /* Adjusted height to fit content */
+            display: flex;
+            flex-direction: column;
+            background-color: #2ecc71; /* Green */
+            color: #fff; /* White text */
+            border-radius: 10px; /* Rounded Corners */
+            margin-right: 20px; /* Increased margin for spacing */
+            margin-bottom: 20px; /* Added margin at the bottom */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .columns1:hover {
+            transform: scale(1.05); /* Enlarge the column on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover for a lifted effect */
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .header {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .frame:nth-child(odd) {
+            background-color: #2980b9; /* Darker Blue */
+        }
+
+        .columns:nth-child(odd) {
+            background-color: #d5dbdb; /* Lighter Grey */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff; /* White Text */
+            transition: color 0.3s ease; /* Smooth transition for color change */
+        }
+
+        a:hover {
+            color: #e74c3c; /* Red on hover */
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .product-image:hover {
+            transform: scale(1.05); /* Enlarge the image on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover for a lifted effect */
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .columns,
+            .columns1 {
+                width: 100%; /* Set columns to full width on smaller screens */
+                margin-right: 0; /* Remove right margin on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- First Frame - Header -->
+    <div class="frame">
+        <div class="logo">
+            <!-- Content for the logo -->
+            <img src="logo.jpg" alt="Company Logo" class="logo">
+        </div>
+        <div class="header marquee-text">
+            <!-- Content for the website header -->
+            <h2>Online Shopping Site - Welcome to our store! Check out our latest deals and products.</h2>
+        </div>
+    </div>
+
+    <!-- Second Frame - Navigation -->
+    <div class="frame1">
+        <!-- Content for the second frame -->
+        <div class="columns">
+            <h2>Home</h2>
+            <p>Welcome to our online store.</p>
+        </div>
+        <div class="columns">
+            <h2>Shop</h2>
+            <p>Explore our products and find great deals.</p>
+        </div>
+        <div class="columns">
+            <h2>Cart</h2>
+            <p>View and manage items in your shopping cart.</p>
+        </div>
+        <div class="columns">
+            <h2>Account</h2>
+            <p>Sign in or create an account.</p>
+        </div>
+        <div class="columns">
+            <h2>Contact</h2>
+            <p>Reach out to us for any inquiries.</p>
+        </div>
+        <!-- Add more content as needed -->
+    </div>
+
+    <!-- Third Frame - Main Content -->
+    <div class="frame1">
+        <!-- Content for the third frame -->
+        <div class="columns1" id="linksColumn">
+            <h2>Featured Products</h2>
+            <ul>
+                <li><a href="#" onclick="loadContent('iPhone 14')">iPhone 14</a></li>
+                <li><a href="#" onclick="loadContent('MacBook Pro')">MacBook Pro</a></li>
+                <li><a href="#" onclick="loadContent('Apple Watch')">Apple Watch</a></li>
+                <li><a href="#" onclick="loadContent('AirPods')">AirPods</a></li>
+                <li><a href="#" onclick="loadContent('Nikon Camera')">Nikon Camera</a></li>
+            </ul>
+        </div>
+        <div class="columns1" id="descriptionColumn">
+            <h2>Product Details</h2>
+            <p>Click on a product to view more details.</p>
+        </div>
+        <!-- Add more content as needed -->
+    </div>
+
+    <script>
+        function loadContent(product) {
+            var descriptionColumn = document.getElementById('descriptionColumn');
+            switch (product) {
+                case 'iPhone 14':
+                    descriptionColumn.innerHTML = `
+                        <h2>iPhone 14</h2>
+                        <img src="iphone14.jpg" alt="iPhone 14" class="product-image" style="max-width: 50%;">
+                        <p>The iPhone 14 and iPhone 14 Plus feature a 6.1-inch (15 cm) and 6.7-inch (17 cm) display, improvements to the rear-facing camera, and satellite connectivity for contacting emergency services when a user in trouble is beyond the range of Wi-Fi or cellular networks.</p>
+                    `;
+                    break;
+                case 'MacBook Pro':
+                    descriptionColumn.innerHTML = `
+                        <h2>MacBook Pro</h2>
+                        <img src="macbookpro.jpg" alt="MacBook Pro" class="product-image" style="max-width: 50%;">
+                        <p>It is powered by a Core i5 processor and it comes with 12GB of RAM. The Apple MacBook Pro packs 512GB of SSD storage. Connectivity options include Wi-Fi 802.11 ac, Bluetooth and it comes with 2 USB ports (2 x USB 3.0), Mic In ports.</p>
+                    `;
+                    break;
+                case 'Apple Watch':
+                    descriptionColumn.innerHTML = `
+                        <h2>Apple Watch</h2>
+                        <img src="applewatch.jpg" alt="Apple Watch" class="product-image" style="max-width: 50%;">
+                        <p>Apple Watch Series 9 is capable of generating an ECG similar to a single‑lead electrocardiogram. And with the Heart Rate app, you can get notifications
+                            <p>Apple Watch Series 9 is capable of generating an ECG similar to a single‑lead electrocardiogram. And with the Heart Rate app, you can get notifications for high and low heart rate as well as an irregular rhythm.</p>
+                    `;
+                    break;
+                case 'AirPods':
+                    descriptionColumn.innerHTML = `
+                        <h2>AirPods</h2>
+                        <img src="airpods.jpg" alt="AirPods" class="product-image" style="max-width: 25%;">
+                        <p>AirPods deliver the wireless headphone experience, reimagined. Just pull them out of the Lightning Charging Case and they're ready to use with your iPhone, Apple Watch, iPad, or Mac. After a simple one-tap setup, AirPods work like magic. They're automatically on and always connected.</p>
+                    `;
+                    break;
+                case 'Nikon Camera':
+                    descriptionColumn.innerHTML = `
+                        <h2>Nikon Camera</h2>
+                        <img src="nikoncamera.webp" alt="Nikon Camera" class="product-image" style="max-width: 25%;">
+                        <p>With the highest resolution image sensor and widest native ISO range ever in a flagship full-frame Nikon DSLR, a remarkable new 153-point AF system with a dedicated processor, EXPEED 5 advancements in image processing and noise reduction, blazing fast 12 fps shooting and, another first, 4K Ultra High Definition (UHD).</p>
+                    `;
+                    break;
+                default:
+                    descriptionColumn.innerHTML = `
+                        <h2>${product}</h2>
+                        <p>Product details coming soon.</p>
+                    `;
+            }
+        }
+    </script>
+</body>
+</html>
